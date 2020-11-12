@@ -1,0 +1,64 @@
+The header taking 100vh with the text "Daily Water Calculator
+
+A H2 below describing the importance of drinking water, and how is varies based on multiple factors, in this case Weight, Activity and Climate 
+
+A form is located below with 3 inputs and a submit button at the end of the form
+
+the first is a text input prompting the user to input their weight in lbs
+
+the second input is a radio input with 3 options asking the user to describe their activity level ranging from low, moderate and high
+
+the third input is a radio input with 3 options asking the user to describe the climate they live at ranging from cold, moder and hot. 
+
+upon submission of the form the data will be collected nad the inputs from the activity level and climate will determine a multiplier on the users weight to determine the amount of "daily drinking water in ounces" and stored in a variable, "dailyWater".
+
+the "dailyWater" variable will then be passed as an argument through a function to convert it into cups and stored in a varaible, "dailyWaterCups".
+
+"dailyWaterCups" will then be appended to the H2 of the last section and be displayed to the user. A Scroll function will also be used to direct the user attention
+
+Stretch Goals: 
+
+Add a option that will allow users to input weight in kg or lbs 
+
+add a button by the returned "dailyWaterCups" to be converted into litres
+
+To a function that will determine how much water a user should drink in a hour to get their dailyWaterCups intake within 8 hours.
+
+create an alert that will notify the user that at the end of each hour, the user should have drank their hourly "dailyWaterCups"
+
+create a alert to remind the user to stand up and stretch/exercise/move
+
+
+
+
+
+
+
+
+
+//create array for both activity and Climate
+
+
+// create a function that takes the weight and combined index value variables and multiply them
+
+// create a function that converts ounces into cups
+
+// prevent default of form submit
+
+// target value of weight input (and parseint string into numbers?) and store it into a variable, create a alert IF a non-numerical value or no value is entered.
+
+// target value of activity, and get the index number of that value
+// store it in a variable
+// target value of climate, and get the index number of that value
+// store it in a variable
+
+// add the index values of the activity and climate and create a conditional statement if the values = 2 then multiply the weight by 0.5
+//  2 < value < 6 multiply by 0.75
+//  value = 6 multiply by 1 
+// store that combined index value into a variable 
+
+// call weight * index value function which will give you the amount of daily water required in ounces, store it in a varaible
+
+// take the daily water required variable and put it into the function that converts ounces into cups
+
+// update the section, that will then display "you need _____ cups of water a day"

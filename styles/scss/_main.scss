@@ -1,0 +1,73 @@
+// stripping styles
+html {
+  font-size: 62.5%;
+  font-family: "Roboto Slab", serif;
+}
+
+body,
+p,
+h1,
+h2 {
+  margin: 0px;
+  padding: 0px;
+}
+
+body,
+p {
+  font-size: 2.2rem;
+}
+
+.flexContainer {
+  display: flex;
+}
+
+.wrapper {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header {
+  height: 750px;
+  background: url(../assets/image-bg.jpg) no-repeat center;
+  background-size: cover;
+  text-align: center;
+  h1 {
+    padding-top: 50px;
+    font-size: 8rem;
+    font-family: "Big Shoulders Inline Text", cursive;
+  }
+}
+
+.facts {
+  padding: 50px 0px;
+  background-color: #f1faee;
+  h2 {
+    font-family: "Xanh Mono", monospace;
+    font-size: 6rem;
+    text-align: center;
+    padding-bottom: 25px;
+  }
+  .wrapper {
+    div {
+      width: 50%;
+      background-color: #ffffff;
+    }
+  }
+}
+
+.form {
+  background-color: #a8dadcea;
+}
+
+.results {
+  background-color: #f1faee;
+  height: 400px;
+}
+
+footer {
+  padding: 15px 0px;
+  text-align: center;
+  background-color: #1d3557;
+  color: #f1faee;
+}
