@@ -277,7 +277,8 @@ html {
 body,
 p,
 h1,
-h2 {
+h2,
+fieldset {
   margin: 0px;
   padding: 0px;
 }
@@ -301,7 +302,8 @@ p {
 
 header {
   height: 750px;
-  background: url(../assets/image-bg.jpg) no-repeat center;
+  background: url(../assets/image-bg.jpg) no-repeat;
+  background-position: top;
   background-size: cover;
   text-align: center;
 }
@@ -331,11 +333,53 @@ header h1 {
 
 .form {
   background-color: #a8dadcea;
+  padding: 50px 0px;
+}
+
+.form .flexContainer {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 300px;
+  padding-top: 25px;
+}
+
+.form legend {
+  border-bottom: solid 3px black;
+}
+
+.form fieldset {
+  border: none;
+}
+
+.form .active label,
+.form .climate label {
+  padding-left: 100px;
+}
+
+.form input[type="submit"] {
+  background-color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 15px;
+}
+
+.form input:required {
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .results {
   background-color: #f1faee;
-  height: 400px;
+  padding: 50px 0px;
+}
+
+.results .wrapper {
+  text-align: center;
 }
 
 footer {

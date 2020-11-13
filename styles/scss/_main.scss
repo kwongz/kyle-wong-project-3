@@ -7,7 +7,8 @@ html {
 body,
 p,
 h1,
-h2 {
+h2,
+fieldset {
   margin: 0px;
   padding: 0px;
 }
@@ -29,7 +30,8 @@ p {
 
 header {
   height: 750px;
-  background: url(../assets/image-bg.jpg) no-repeat center;
+  background: url(../assets/image-bg.jpg) no-repeat;
+  background-position: top;
   background-size: cover;
   text-align: center;
   h1 {
@@ -58,11 +60,42 @@ header {
 
 .form {
   background-color: #a8dadcea;
+  padding: 50px 0px;
+  .flexContainer {
+    flex-direction: column;
+    justify-content: space-between;
+    height: 300px;
+    padding-top: 25px;
+  }
+  legend {
+    border-bottom: solid 3px black;
+  }
+  fieldset {
+    border: none;
+  }
+  .active,
+  .climate {
+    label {
+      padding-left: 100px;
+    }
+  }
+  input[type="submit"] {
+    background-color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 15px;
+  }
+  input:required {
+    box-shadow: none;
+  }
 }
 
 .results {
   background-color: #f1faee;
-  height: 400px;
+  padding: 50px 0px;
+  .wrapper {
+    text-align: center;
+  }
 }
 
 footer {

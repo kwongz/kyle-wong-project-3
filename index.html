@@ -7,36 +7,36 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Inline+Text:wght@300&family=Roboto+Slab&family=Xanh+Mono:ital@1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+        integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
     <header>
         <h1>Daily Water Calculator</h1>
     </header>
-    <section class="facts">
-        <div class="wrapper">
-            <h2>Water is the driving force of all nature - Leonardo Da Vinci</h2>
-            <div class="flexContainer">
+    <main>
+        <section class="facts">
+            <div class="wrapper">
+                <h2>Water is the driving force of all nature - Leonardo Da Vinci</h2>
                 <p>Water is arguably the most important ingredient for life. Yet we tend to overlook our daily water consumption and as a result face adverse health effects.</p>
-            </div>
-            <div class="flexContainer">
                 <ul>
                     <li>1% dehydration can cause significant decrease in metabolism, resulting in difficulty in losing weight</li>
                     <li>Differentiating between hunger and thirst is difficult, drinking water may resolve your urge for snacking</li>
-                    <li>One of the easiest preventions for kidney stones is </li>
+                    <li>One of the easiest preventions for kidney stones is drinking enough water</li>
                 </ul>
             </div>
-            <p>Fill in the form below to find out how much water you should be drinking each day!</p>
-        </div>
         </section>
-    <main>
         <section class="form">
             <div class="wrapper">
-
-                <form>
-                    <label for="weight">Weight (lbs)</label>
-                    <input type="text" name="weight" id="weight" required>
-                    <fieldset id="active">
+                <p>Fill in the form below to find out how much water you should be drinking each day!</p>
+                <form class="flexContainer">
+                    <fieldset id="weight" class="weight">
+                        <label for="userWeight">Weight (lbs)</label>
+                        <input type="text" name="weight" id="userWeight" required>
+                    </fieldset>
+                    <fieldset id="active" class="active">
                         <legend>Activity Level</legend>
                         <label for="low">Low</label>
                         <input type="radio" name="activity" id="low" value="1" required>
@@ -45,9 +45,9 @@
                         <label for="high">High</label>
                         <input type="radio" name="activity" id="high" value="3" required>
                     </fieldset>
-                    <fieldset id="climate">
+                    <fieldset id="climate" class="climate">
                         <legend>Climate</legend>
-                        <label for="cold">cold</label>
+                        <label for="cold">Cold</label>
                         <input type="radio" name="climate" id="cold" value="1" required>
                         <label for="moderate">Moderate</label>
                         <input type="radio" name="climate" id="moderate" value="2" required>
@@ -63,8 +63,12 @@
         <section class="results">
             <div class="wrapper">
                 <h2>You should be drinking</h2>
-                <h2 id="target"></h2>
+                <h2 id="target"><i class="fas fa-question animate__animated animate__pulse animate__infinite"></i></h2>
             </div>
+        </section>
+        <section id="timer" class="timer">
+            <p>Input the amount of water you have drank, and then blick the button "start now" to begin the timer that will remind you how much water you should be drinking every hour to complete your daily water consumption within 8 hours.</p>
+            <button class="start">Start now</button>
         </section>
     </main>
     <footer> Created by Kyle Wong Juno College 2020</footer>
