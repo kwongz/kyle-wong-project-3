@@ -67,8 +67,19 @@
             </div>
         </section>
         <section id="timer" class="timer">
-            <p>Input the amount of water you have drank, and then blick the button "start now" to begin the timer that will remind you how much water you should be drinking every hour to complete your daily water consumption within 8 hours.</p>
-            <button class="start">Start now</button>
+            <h2>Water Reminder Alarm</h2>
+            <p>Click Start now to be reminded every 15 mins with a audio and alert notification to drink water.</p>
+            <p>Click Stop to end the audio and alert notifications.</p>
+            <audio id="notification">
+                <source src="./assets/notification.mp3" type="audio/mpeg">
+                Your browser does not support the audio element
+            </audio>
+            <div>
+                <button id="startTimer" class="startTimer">Start now</button>
+                <button id="clearTimer" class="clearTimer">Stop</button>
+            </div>
+
+            <div id="timeClock"></div>
         </section>
     </main>
     <footer> Created by Kyle Wong Juno College 2020</footer>
