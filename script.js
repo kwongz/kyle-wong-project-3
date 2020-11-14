@@ -1,18 +1,37 @@
 //psuedo Code
-  $(document).ready(function() {
+$(document).ready(function() {
 
 // Global Scope
-      // target value of weight input (and parseint string into numbers?) and store it into a variable, create a alert IF a non-numerical value or no value is entered.
-    const userWeight = $('#userWeight').val()
+    $('#textAlert').hide();
 
+    const imgArray = [
+        {
+            img: './assets/image-1.jpg',
+            alt: 'a short glass being filled'
+        },
+        {
+            img: './assets/image-2.jpg',
+            alt: 'a tall glass jar filled with water'
+        },
+        {
+            img: './assets/image-3.jpg',
+            alt: 'water inside a corked class container '
+        }
+    ]
+    
+    // randomizer for img array
 
-
+    const randomizer = function (array) {
+        let i = Math.floor(Math.random() * array.length)
+        return array[i];
+    }
+    
+      // prevent default of form submit
+    
+    $('form').on('submit', function(e){
+        e.preventDefault();
         
-        // prevent default of form submit
-        
-        $('form').on('submit', function(e){
-            e.preventDefault();
-            
+        const userWeight = $('#userWeight').val()
             //  this line of code ensures that positive numerical input is entered, otherwise the user will be alerted
             if (userWeight >= 0) {
                 $('#userWeight').val('')
@@ -62,29 +81,32 @@
             const dailyWaterCups = waterCups(dailyWaterOunces, ouncesCupsRatio);
 
 
-            // update the section, to display the dailyWaterCups 
+            // courtesy of juno college Queen street hot treat code-along
+            $('html').animate({
+                scrolltop: $('#results').offset().top
+            }, 1000);
 
-            $('#target').text(`${dailyWaterCups} cups of water`);     
-        
+            // update the section, to display the dailyWaterCups 
+            $('#target').text(`${dailyWaterCups} cups of water`);    
         }) //End of form event listener
         
 
         // create a timer that alerts the user with a audio and visual notification to drink water every 15 mins
         $('#startTimer').on('click', function (){
             const waterReminder = setInterval(function() {
-                document.getElementById("notification").play();
-                alert("Drink Water");
+                $('#notification').trigger('play');
+                $('#textAlert').show();
+                $('#arrayImg').html(`<img src=${randomizer(imgArray).img} alt=${randomizer(imgArray).alt}/>`);
             }, 
-            90000);
+            10000);
             // create button that stop clears the interval function waterReminder when the user clicks the button stop
             $('#clearTimer').on('click', function (){
                 clearInterval(waterReminder);
             })
         })
-        // setInterval(function(){ alert("Hello"); }, 3000);
 
-        // create a timer that starts when the user clicks "start now"
-
-        // make a conditional statement that alerts the user every 15 mins to drink some water
+        $('#confirm').on('click', function () {
+            $('#textAlert').hide();
+        })
 
     });

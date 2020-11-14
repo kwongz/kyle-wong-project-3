@@ -13,6 +13,57 @@ fieldset {
   padding: 0px;
 }
 
+// global styling
+section {
+  padding: 50px 0px;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.facts,
+.results {
+  background-color: #f1faee;
+}
+
+.form,
+.timer {
+  background-color: #a8dadcea;
+}
+
+h2 {
+  padding-bottom: 25px;
+  text-align: center;
+}
+
+button,
+input[type="submit"] {
+  background-color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 15px;
+  border: 5px #ffffff solid;
+}
+
+// hover effects
+button:hover,
+button:focus,
+input[type="submit"]:hover,
+input[type="submit"]:focus {
+  background-color: #1d3557;
+  color: #ffffff;
+  cursor: pointer;
+  border: 5px solid #1d3557;
+}
+
+button:active,
+input[type="submit"]:active {
+  border: 5px #ffffff solid;
+}
+
 body,
 p {
   font-size: 2.2rem;
@@ -20,6 +71,9 @@ p {
 
 .flexContainer {
   display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 300px;
 }
 
 .wrapper {
@@ -31,7 +85,7 @@ p {
 header {
   height: 750px;
   background: url(../assets/image-bg.jpg) no-repeat;
-  background-position: top;
+  background-position: center;
   background-size: cover;
   text-align: center;
   h1 {
@@ -42,33 +96,19 @@ header {
 }
 
 .facts {
-  padding: 50px 0px;
-  background-color: #f1faee;
   h2 {
     font-family: "Xanh Mono", monospace;
-    font-size: 6rem;
     text-align: center;
-    padding-bottom: 25px;
-  }
-  .wrapper {
-    div {
-      width: 50%;
-      background-color: #ffffff;
-    }
   }
 }
 
 .form {
-  background-color: #a8dadcea;
-  padding: 50px 0px;
-  .flexContainer {
-    flex-direction: column;
-    justify-content: space-between;
-    height: 300px;
-    padding-top: 25px;
+  p {
+    padding-bottom: 25px;
   }
   legend {
     border-bottom: solid 3px black;
+    margin-bottom: 10px;
   }
   fieldset {
     border: none;
@@ -79,22 +119,44 @@ header {
       padding-left: 100px;
     }
   }
-  input[type="submit"] {
-    background-color: #ffffff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 15px;
-  }
   input:required {
     box-shadow: none;
   }
 }
-
 .results {
-  background-color: #f1faee;
-  padding: 50px 0px;
   .wrapper {
     text-align: center;
+  }
+}
+
+.timer {
+  h2 {
+    text-align: center;
+  }
+  .textAlert {
+    background-color: rgba($color: #1d3557, $alpha: 0.95);
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    .alertBox {
+      background-color: #a8dadcea;
+      padding: 50px;
+      border-radius: 25px;
+      text-align: center;
+    }
+    h2 {
+      padding: 0px;
+    }
+    .arrayImg {
+      width: 300px;
+      height: 300px;
+      padding: 25px;
+    }
   }
 }
 

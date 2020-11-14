@@ -46,7 +46,7 @@
                         <input type="radio" name="activity" id="high" value="3" required>
                     </fieldset>
                     <fieldset id="climate" class="climate">
-                        <legend>Climate</legend>
+                        <legend>Climate Temperature</legend>
                         <label for="cold">Cold</label>
                         <input type="radio" name="climate" id="cold" value="1" required>
                         <label for="moderate">Moderate</label>
@@ -60,26 +60,33 @@
                 </form>
             </div>
         </section>
-        <section class="results">
+        <section id="results" class="results">
             <div class="wrapper">
                 <h2>You should be drinking</h2>
                 <h2 id="target"><i class="fas fa-question animate__animated animate__pulse animate__infinite"></i></h2>
             </div>
         </section>
         <section id="timer" class="timer">
-            <h2>Water Reminder Alarm</h2>
-            <p>Click Start now to be reminded every 15 mins with a audio and alert notification to drink water.</p>
-            <p>Click Stop to end the audio and alert notifications.</p>
-            <audio id="notification">
-                <source src="./assets/notification.mp3" type="audio/mpeg">
-                Your browser does not support the audio element
-            </audio>
-            <div>
-                <button id="startTimer" class="startTimer">Start now</button>
-                <button id="clearTimer" class="clearTimer">Stop</button>
+            <div class="wrapper flexContainer">
+                <h2>Water Reminder Alarm</h2>
+                <p>Click Start now to be reminded every 15 mins with a audio and alert notification to drink water.</p>
+                <p>Click Stop to end the audio and alert notifications.</p>
+                <audio id="notification">
+                    <source src="./assets/notification.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element
+                </audio>
+                <div id="textAlert" class="textAlert flexContainer">
+                    <div class="alertBox animate__fadeInDown animate__animated">
+                        <h2>Drink more water</h2>
+                        <div id='arrayImg' class="arrayImg"></div>
+                        <button id="confirm" class="confirm">I will, Thanks!</button>
+                    </div>
+                </div>
+                <div>
+                    <button id="startTimer" class="startTimer">Start now</button>
+                    <button id="clearTimer" class="clearTimer">Stop</button>
+                </div>
             </div>
-
-            <div id="timeClock"></div>
         </section>
     </main>
     <footer> Created by Kyle Wong Juno College 2020</footer>

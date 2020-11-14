@@ -283,6 +283,56 @@ fieldset {
   padding: 0px;
 }
 
+section {
+  padding: 50px 0px;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.facts,
+.results {
+  background-color: #f1faee;
+}
+
+.form,
+.timer {
+  background-color: #a8dadcea;
+}
+
+h2 {
+  padding-bottom: 25px;
+  text-align: center;
+}
+
+button,
+input[type="submit"] {
+  background-color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 15px;
+  border: 5px #ffffff solid;
+}
+
+button:hover,
+button:focus,
+input[type="submit"]:hover,
+input[type="submit"]:focus {
+  background-color: #1d3557;
+  color: #ffffff;
+  cursor: pointer;
+  border: 5px solid #1d3557;
+}
+
+button:active,
+input[type="submit"]:active {
+  border: 5px #ffffff solid;
+}
+
 body,
 p {
   font-size: 2.2rem;
@@ -292,6 +342,14 @@ p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 300px;
 }
 
 .wrapper {
@@ -303,7 +361,7 @@ p {
 header {
   height: 750px;
   background: url(../assets/image-bg.jpg) no-repeat;
-  background-position: top;
+  background-position: center;
   background-size: cover;
   text-align: center;
 }
@@ -314,42 +372,18 @@ header h1 {
   font-family: "Big Shoulders Inline Text", cursive;
 }
 
-.facts {
-  padding: 50px 0px;
-  background-color: #f1faee;
-}
-
 .facts h2 {
   font-family: "Xanh Mono", monospace;
-  font-size: 6rem;
   text-align: center;
+}
+
+.form p {
   padding-bottom: 25px;
-}
-
-.facts .wrapper div {
-  width: 50%;
-  background-color: #ffffff;
-}
-
-.form {
-  background-color: #a8dadcea;
-  padding: 50px 0px;
-}
-
-.form .flexContainer {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  height: 300px;
-  padding-top: 25px;
 }
 
 .form legend {
   border-bottom: solid 3px black;
+  margin-bottom: 10px;
 }
 
 .form fieldset {
@@ -361,25 +395,53 @@ header h1 {
   padding-left: 100px;
 }
 
-.form input[type="submit"] {
-  background-color: #ffffff;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 15px;
-}
-
 .form input:required {
   -webkit-box-shadow: none;
           box-shadow: none;
 }
 
-.results {
-  background-color: #f1faee;
-  padding: 50px 0px;
-}
-
 .results .wrapper {
   text-align: center;
+}
+
+.timer h2 {
+  text-align: center;
+}
+
+.timer .textAlert {
+  background-color: rgba(29, 53, 87, 0.95);
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.timer .textAlert .alertBox {
+  background-color: #a8dadcea;
+  padding: 50px;
+  border-radius: 25px;
+  text-align: center;
+}
+
+.timer .textAlert h2 {
+  padding: 0px;
+}
+
+.timer .textAlert .arrayImg {
+  width: 300px;
+  height: 300px;
+  padding: 25px;
 }
 
 footer {
