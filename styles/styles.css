@@ -375,6 +375,11 @@ header h1 {
 .facts h2 {
   font-family: "Xanh Mono", monospace;
   text-align: center;
+  font-size: 5rem;
+}
+
+.facts li {
+  padding-top: 10px;
 }
 
 .form p {
@@ -383,7 +388,7 @@ header h1 {
 
 .form legend {
   border-bottom: solid 3px black;
-  margin-bottom: 10px;
+  margin-bottom: 25px;
 }
 
 .form fieldset {
@@ -406,6 +411,14 @@ header h1 {
 
 .timer h2 {
   text-align: center;
+}
+
+.timer .flexContainer div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .timer .textAlert {
@@ -449,4 +462,58 @@ footer {
   text-align: center;
   background-color: #1d3557;
   color: #f1faee;
+}
+
+@media (max-width: 768px) {
+  body,
+  p {
+    font-size: 2rem;
+    text-align: center;
+  }
+  .facts h2 {
+    font-size: 3.5rem;
+  }
+  .form .flexContainer {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .form .active,
+  .form .climate,
+  .form .submitContainer {
+    width: 100%;
+    margin-top: 25px;
+  }
+  .form .active label,
+  .form .climate label,
+  .form .submitContainer label {
+    width: 100%;
+    padding-left: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  body,
+  p {
+    font-size: 1.8rem;
+  }
+  header {
+    background-position: 65%;
+  }
+  .facts h2 {
+    font-size: 2.5rem;
+  }
+  .form form {
+    height: 100%;
+  }
+  .form .submitContainer {
+    text-align: center;
+  }
+  .form .active label,
+  .form .climate label {
+    padding-left: 25px;
+  }
 }
