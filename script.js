@@ -94,6 +94,8 @@ $(document).ready(function() {
 
         // create a timer that alerts the user with a audio and visual notification to drink water every 15 mins
         $('#startTimer').on('click', function (){
+            // ensures button can only be pushed once while active to multiple clicks causing multiple consecutive alerts, thanks to https://www.quora.com/How-do-I-avoid-multiple-click-events-in-jQuery
+            $('#startTimer').attr('disabled',true);
             const waterReminder = setInterval(function() {
                 $('#notification').trigger('play');
                 $('#textAlert').show();
@@ -102,6 +104,8 @@ $(document).ready(function() {
             10000);
             // create button that stop clears the interval function waterReminder when the user clicks the button stop
             $('#clearTimer').on('click', function (){
+                // reenables the startTimer buttton when stop is pushed.
+                $('#startTimer').attr('disabled',false);
                 clearInterval(waterReminder);
             })
         })

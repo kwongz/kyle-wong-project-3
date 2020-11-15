@@ -69,11 +69,16 @@ p {
   font-size: 2.2rem;
 }
 
+p {
+  line-height: 32px;
+}
+
 .flexContainer {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 300px;
+  min-height: 300px;
+  height: 100%;
 }
 
 .wrapper {
@@ -100,11 +105,14 @@ header {
 .facts {
   h2 {
     font-family: "Xanh Mono", monospace;
-    text-align: center;
     font-size: 5rem;
+    line-height: 80px;
   }
   li {
     padding-top: 10px;
+  }
+  .break {
+    display: block;
   }
 }
 
@@ -136,16 +144,17 @@ header {
   .wrapper {
     text-align: center;
   }
+  .fa-question {
+    padding-top: 20px;
+  }
 }
 
 // timmer sections styling
 .timer {
-  h2 {
-    text-align: center;
-  }
   .timerButtons {
     display: flex;
     justify-content: space-around;
+    padding-top: 25px;
   }
   .textAlert {
     background-color: rgba($color: #1d3557, $alpha: 0.95);
@@ -190,12 +199,6 @@ footer {
     text-align: center;
   }
 
-  .facts {
-    h2 {
-      font-size: 3.5rem;
-    }
-  }
-
   .form {
     .flexContainer {
       flex-direction: row;
@@ -225,7 +228,7 @@ footer {
 
   .facts {
     h2 {
-      font-size: 2.5rem;
+      font-size: 3.5rem;
     }
   }
 

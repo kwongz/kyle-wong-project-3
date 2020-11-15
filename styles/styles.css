@@ -338,6 +338,10 @@ p {
   font-size: 2.2rem;
 }
 
+p {
+  line-height: 32px;
+}
+
 .flexContainer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -349,7 +353,8 @@ p {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  height: 300px;
+  min-height: 300px;
+  height: 100%;
 }
 
 .wrapper {
@@ -374,12 +379,16 @@ header h1 {
 
 .facts h2 {
   font-family: "Xanh Mono", monospace;
-  text-align: center;
   font-size: 5rem;
+  line-height: 80px;
 }
 
 .facts li {
   padding-top: 10px;
+}
+
+.facts .break {
+  display: block;
 }
 
 .form p {
@@ -409,8 +418,8 @@ header h1 {
   text-align: center;
 }
 
-.timer h2 {
-  text-align: center;
+.results .fa-question {
+  padding-top: 20px;
 }
 
 .timer .timerButtons {
@@ -419,6 +428,7 @@ header h1 {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  padding-top: 25px;
 }
 
 .timer .textAlert {
@@ -470,9 +480,6 @@ footer {
     font-size: 2rem;
     text-align: center;
   }
-  .facts h2 {
-    font-size: 3.5rem;
-  }
   .form .flexContainer {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -504,7 +511,7 @@ footer {
     background-position: 65%;
   }
   .facts h2 {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
   }
   .form form {
     height: 100%;
