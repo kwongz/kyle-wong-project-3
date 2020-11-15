@@ -143,11 +143,9 @@ header {
   h2 {
     text-align: center;
   }
-  .flexContainer {
-    div {
-      display: flex;
-      justify-content: space-around;
-    }
+  .timerButtons {
+    display: flex;
+    justify-content: space-around;
   }
   .textAlert {
     background-color: rgba($color: #1d3557, $alpha: 0.95);
