@@ -42,7 +42,7 @@ $(document).ready(function() {
         if (userWeight >= 0) {
             $('#userWeight').val('')
         } else {
-            alert('please input your weight in lbs');
+           return alert('please input your weight in lbs');
         }
             
         // target value of activity, and store it in a varaible

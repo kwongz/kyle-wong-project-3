@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daily Water Calculator</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Inline+Text:wght@300&family=Roboto+Slab&family=Xanh+Mono:ital@1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
         integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
@@ -38,21 +36,21 @@
                     </fieldset>
                     <fieldset id="active" class="active">
                         <legend>Activity Level</legend>
-                        <label for="low">Low</label>
-                        <input type="radio" name="activity" id="low" value="1" required>
-                        <label for="moderate">Moderate</label>
-                        <input type="radio" name="activity" id="moderate" value="2" required>
-                        <label for="high">High</label>
-                        <input type="radio" name="activity" id="high" value="3" required>
+                        <input type="radio" name="activity" id="activityLow" value="1" required>
+                        <label for="activityLow">Low</label>
+                        <input type="radio" name="activity" id="activityModerate" value="2" required>
+                        <label for="activityModerate">Moderate</label>
+                        <input type="radio" name="activity" id="activityHigh" value="3" required>
+                        <label for="activityHigh">High</label>
                     </fieldset>
                     <fieldset id="climate" class="climate">
                         <legend>Climate Temperature</legend>
-                        <label for="cold">Cold</label>
-                        <input type="radio" name="climate" id="cold" value="1" required>
-                        <label for="moderate">Moderate</label>
-                        <input type="radio" name="climate" id="moderate" value="2" required>
-                        <label for="high">Hot</label>
-                        <input type="radio" name="climate" id="hot" value="3" required>
+                        <input type="radio" name="climate" id="climateCold" value="1" required>
+                        <label for="climateCold">Cold</label>
+                        <input type="radio" name="climate" id="climateModerate" value="2" required>
+                        <label for="climateModerate">Moderate</label>
+                        <input type="radio" name="climate" id="climateHot" value="3" required>
+                        <label for="climateHot">Hot</label>
                     </fieldset>
                     <div class="submitContainer">
                         <input type="submit" value="submit">
