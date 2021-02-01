@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daily Water Calculator</title>
-    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Inline+Text:wght@300&family=Roboto+Slab&family=Xanh+Mono:ital@1&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
         integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
@@ -12,23 +13,35 @@
 </head>
 <body>
     <header>
-        <h1>Daily Water Calculator</h1>
+        <h1 class="contentHidden">
+            <span class="flyIn">
+                The Daily
+            </span>
+            <span class="flyIn">
+                Water
+            </span>
+            <span class="flyIn">
+                Calculator
+            </span>
+        </h1>
+        <div class="cup"></div>
+        <div class="carousel contentHidden">
+            <i class="fas fa-arrow-left arrow" id="previous"></i>
+            <div class="carouselFacts" id="carouselFacts">
+                <p class="facts">Drinking water increases energy and relieves fatigue <span class="factTracker">1/3</span></p>
+                <p class="facts">Drinking water can promote weight loss and flushes out toxins <span class="factTracker">2/3</span></p>
+                <p class="facts">Drinking water can prevent and treat headaches <span class="factTracker">3/3</span></p>
+            </div>
+            <i class="fas fa-arrow-right arrow" id="next"></i>
+        </div>
+        <div class="scrollDown contentHidden">
+            <i class="fas fa-arrow-circle-down"></i>
+        </div>
     </header>
     <main>
-        <section class="facts">
+        <section class="form" id="form">
             <div class="wrapper">
-                <h2>Water is the driving force of all nature - <span class="break">Leonardo Da Vinci</span></h2>
-                <p>Water is arguably the most important ingredient for life. Yet we tend to overlook our daily water consumption and as a result face adverse health effects.</p>
-                <ul>
-                    <li>1% dehydration can cause significant decrease in metabolism, resulting in difficulty in losing weight</li>
-                    <li>Differentiating between hunger and thirst is difficult, drinking water may resolve your urge for snacking</li>
-                    <li>One of the easiest preventions for kidney stones is drinking enough water</li>
-                </ul>
-            </div>
-        </section>
-        <section class="form">
-            <div class="wrapper">
-                <p>Fill in the form below to find out how much water you should be drinking each day!</p>
+                <h2>How much water should you be drinking?</h2>
                 <form class="flexContainer">
                     <fieldset id="weight" class="weight">
                         <label for="userWeight">Weight (lbs)</label>
@@ -53,7 +66,7 @@
                         <label for="climateHot">Hot</label>
                     </fieldset>
                     <div class="submitContainer">
-                        <input type="submit" value="submit">
+                        <input type="submit" value="Submit">
                     </div>
                 </form>
             </div>
@@ -62,32 +75,14 @@
             <div class="wrapper">
                 <h2>You should be drinking</h2>
                 <h2 id="target" class="target"><i class="fas fa-question animate__animated animate__pulse animate__infinite"></i></h2>
-            </div>
-        </section>
-        <section id="timer" class="timer">
-            <div class="wrapper flexContainer">
-                <h2>Water Reminder Alarm</h2>
-                <p>Click Start now to be reminded every 15 mins with a audio and alert notification to drink water. (For project submission purposes the alarm has been set to every 10s to test functionality)</p>
-                <p>Click Stop to end the audio and alert notifications.</p>
-                <audio id="notification">
-                    <source src="./assets/notification.mp3" type="audio/mpeg">
-                    Your browser does not support the audio element
-                </audio>
-                <div id="textAlert" class="textAlert flexContainer">
-                    <div class="alertBox animate__fadeInDown animate__animated">
-                        <h2>Drink more water</h2>
-                        <figure id='arrayImg' class="arrayImg"></figure>
-                        <button id="confirm" class="confirm">I will, Thanks!</button>
-                    </div>
-                </div>
-                <div class="timerButtons">
-                    <button id="startTimer" class="startTimer">Start now</button>
-                    <button id="clearTimer" class="clearTimer">Stop</button>
-                </div>
+                <ul class="drinkingCups" id='drinkingCups'>
+                </ul>
             </div>
         </section>
     </main>
-    <footer> Created by Kyle Wong Juno College 2020</footer>
+    <footer>
+        <p>Created by Kyle Wong - Juno College 2020</p>
+    </footer>
     <script src='https://code.jquery.com/jquery-3.4.0.min.js' integrity='sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=' crossorigin='anonymous'></script>
     <script src="script.js"></script>
 </body>
